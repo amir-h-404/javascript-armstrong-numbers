@@ -7,6 +7,19 @@
 
 .header {
   font-size: 40px;
-  margin: 15px;
+  margin: 25px 20px;
   color: rgb(0, 13, 154);
+}
+
+.inputBox {
+  margin: 20px;
+}
+
+input[name="inputOfUser"] {
+  padding: 8px;
+}
+
+.inputBox,
+input[name="inputOfUser"] {
+  font-size: 27px;
 }
