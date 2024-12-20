@@ -60,3 +60,17 @@ input[name="inputOfUser"] {
   flex-wrap: wrap;
   gap: 12px;
 }
+
+@media screen AND (max-width: 648px) {
+  * {
+    font-size: 20px;
+  }
+
+  .header {
+    font-size: 22px;
+  }
+
+  input[name="inputOfUser"] {
+    max-width: 150px;
+  }
+}
