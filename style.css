@@ -6,14 +6,15 @@
   font-size: 27px;
 }
 
-.header {
-  font-size: 40px;
-  margin: 25px 20px;
-  color: rgb(0, 13, 154);
+html,
+body {
+  height: 100%;
 }
 
-.inputBox {
-  margin: 20px;
+.header {
+  font-size: 40px;
+  color: rgb(0, 13, 154);
+  text-align: center;
 }
 
 input[name="inputOfUser"] {
@@ -26,9 +27,36 @@ input[name="inputOfUser"] {
 }
 
 #result {
-  margin: 40px 20px;
   background-color: rgb(228, 228, 228);
   padding: 12px;
   border-radius: 12px;
   font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  min-height: 100%;
+  background-color: rgb(106, 254, 254);
+}
+
+.conAbs {
+  padding: 12px 12px 0 12px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid gray;
+}
+
+.conAbs > * {
+  margin-bottom: 28px;
+}
+
+.label_btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
