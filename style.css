@@ -31,6 +31,7 @@ input[name="inputOfUser"] {
   padding: 12px;
   border-radius: 12px;
   font-weight: bold;
+  display: none;
 }
 
 .container {
