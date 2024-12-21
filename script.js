@@ -8,7 +8,7 @@ function calculateArmStrong() {
       showResult("Input must be an integer!");
       break;
     default:
-      showResult("yes! continue...");
+      checkIsArmStrongNumber(inputOfUser);
       break;
   }
 }
@@ -30,4 +30,13 @@ function showResult(message = "", seeMe = true) {
   const resultP = document.getElementById("result");
   resultP.innerHTML = message;
   seeMe ? (resultP.style.display = "block") : (resultP.style.display = "none");
+}
+
+// check number is armstrong or not:
+function checkIsArmStrongNumber(input) {
+  // absolute value:
+  const absInput = Math.abs(Number(input));
+  for (const d of String(absInput)) {
+    console.log(d);
+  }
 }
