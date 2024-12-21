@@ -24,16 +24,14 @@ function checkNumberIsInteger(input) {
 
 // check user input is not empty:
 function checkIsNotEmpty(input) {
-  if (input.length === 0) return false;
-  return true;
+  return input.trim().length === 0;
 }
 
 // show or hide message of result:
 function showResult(message, seeMe = true) {
   const resultP = document.getElementById("result");
   resultP.innerHTML = message;
-  const displayOfP = seeMe ? "block" : "none";
-  resultP.style.display = displayOfP;
+  resultP.style.display = seeMe ? "block" : "none";
 }
 
 // check number is armstrong or not:
