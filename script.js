@@ -39,13 +39,14 @@ function showResult(message, seeMe = true) {
 // check number is armstrong or not:
 function checkIsArmStrongNumber(input) {
   // absolute value:
-  const absInput = String(Math.abs(Number(input)));
-  let inputNumber = 0;
-  for (const d of absInput) {
-    inputNumber += Math.pow(Number(d), absInput.length);
-  }
-  if (inputNumber === Number(absInput)) return true;
-  return false;
+  const absInput = String(Math.abs(Number(input))),
+    listOfChar = absInput.split(""), // ['1', '5', '3']
+    inputNumber = listOfChar.reduce(
+      // sum and power: 153
+      (sum, value) => sum + Math.pow(Number(value), absInput.length),
+      0
+    );
+  return inputNumber === Number(absInput);
 }
 
 // check user input is valid:
