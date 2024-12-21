@@ -24,7 +24,7 @@ function checkNumberIsInteger(input) {
 
 // check user input is not empty:
 function checkIsNotEmpty(input) {
-  return input.trim().length === 0;
+  return input.trim().length !== 0;
 }
 
 // show or hide message of result:
