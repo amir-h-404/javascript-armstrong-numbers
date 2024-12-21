@@ -1,6 +1,16 @@
 function calculateArmStrong() {
   const inputOfUser = document.querySelector("input[name=inputOfUser]").value;
-  // todo
+  switch (false) {
+    case checkIsNotEmpty(inputOfUser):
+      showResult("Input cannot be empty!");
+      break;
+    case checkNumberIsInteger(inputOfUser):
+      showResult("Input must be an integer!");
+      break;
+    default:
+      showResult("yes! continue...");
+      break;
+  }
 }
 
 // check user input is an Integer number:
