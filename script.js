@@ -8,7 +8,10 @@ function calculateArmStrong() {
       showResult("Input must be an integer!");
       break;
     default:
-      checkIsArmStrongNumber(inputOfUser);
+      const message = checkIsArmStrongNumber(inputOfUser)
+        ? "The number is an Armstrong number."
+        : "The number is not an Armstrong number.";
+      showResult(message);
       break;
   }
 }
@@ -29,14 +32,18 @@ function checkIsNotEmpty(input) {
 function showResult(message = "", seeMe = true) {
   const resultP = document.getElementById("result");
   resultP.innerHTML = message;
-  seeMe ? (resultP.style.display = "block") : (resultP.style.display = "none");
+  const displayOfP = seeMe ? "block" : "none";
+  resultP.style.display = displayOfP;
 }
 
 // check number is armstrong or not:
 function checkIsArmStrongNumber(input) {
   // absolute value:
-  const absInput = Math.abs(Number(input));
-  for (const d of String(absInput)) {
-    console.log(d);
+  const absInput = String(Math.abs(Number(input)));
+  let inputNumber = 0;
+  for (const d of absInput) {
+    inputNumber += Math.pow(Number(d), absInput.length);
   }
+  if (inputNumber === Number(absInput)) return true;
+  return false;
 }
