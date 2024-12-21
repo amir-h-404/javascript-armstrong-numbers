@@ -29,7 +29,7 @@ function checkIsNotEmpty(input) {
 }
 
 // show or hide message of result:
-function showResult(message = "", seeMe = true) {
+function showResult(message, seeMe = true) {
   const resultP = document.getElementById("result");
   resultP.innerHTML = message;
   const displayOfP = seeMe ? "block" : "none";
@@ -51,25 +51,5 @@ function checkIsArmStrongNumber(input) {
 // check user input is valid:
 function inputIsValid() {
   const inputElm = document.querySelector("input[name=inputOfUser]");
-  let validValue = "";
-  for (const v of inputElm.value) {
-    switch (v) {
-      case "0":
-      case "1":
-      case "2":
-      case "3":
-      case "4":
-      case "5":
-      case "6":
-      case "7":
-      case "8":
-      case "9":
-        validValue += v;
-        break;
-      default:
-        validValue += "";
-        break;
-    }
-  }
-  inputElm.value = validValue;
+  inputElm.value = inputElm.value.replace(/[^0-9]/i, "");
 }
