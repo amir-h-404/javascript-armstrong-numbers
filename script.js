@@ -18,8 +18,7 @@ function calculateArmStrong() {
 
 // check user input is an Integer number:
 function checkNumberIsInteger(input) {
-  if (!Number.isSafeInteger(Number(input))) return false;
-  return true;
+  return Number.isSafeInteger(Number(input));
 }
 
 // check user input is not empty:
